@@ -1,0 +1,14 @@
+{% extends 'admin/model/details.html' %}
+{% block tail %}
+    {{ super() }}
+
+    <div class="container">
+        {% if model.file_extension.lower() in ('jpg', 'png', 'jpeg', 'gif') %}
+        <img src="/downloads/{{model.file_path}}" />
+        {% elif model.file_extension.lower() in ('webm', 'mp4') %}
+        <video controls style="max-width: 100%">
+            <source src="/downloads/{{model.file_path}}" />
+        </video>
+        {% endif %}
+    </div>
+{% endblock %}

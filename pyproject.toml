@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "cloud-file-manager"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+packages = [{include = "cloud_file_manager"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+flask = "^2.2.3"
+flask-admin = "^1.6.1"
+python-dotenv = "^1.0.0"
+wtforms = "^3.0.1"
+google-cloud-storage = "^2.7.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
